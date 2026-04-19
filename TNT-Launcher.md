@@ -3,14 +3,16 @@ You will learn here how to do a TNT launcher (using a bow) but also any entity (
 To start off, create an scoreboard using
 ```
 /scoreboard objectives add bow_shot minecraft.used:minecraft.bow
-This creates a variable that increases each time you use a bow
 ```
+This creates a variable that increases each time you use a bow
+
 
 Then, do :
 ```
 /scoreboard players add #checker bow_shot 1
-This creates a fake player named checker that has bow_shot to 1, which we will use to compare later on.
 ```
+This creates a fake player named checker that has bow_shot to 1, which we will use to compare later on.
+
 
 Final step before the command blocks, run :
 ```
