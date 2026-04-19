@@ -50,13 +50,18 @@ execute at @e[type=tnt,tag=bow_shot] run tag @n remove bow_shot
 This removes the tag bow_shot to any tnt, so it acts as a normal tnt, and can't be moved again by arrows.
 If you replaced the TNT, replace @e[type=tnt,tag=bow_shot] by @e[type=the entity you want,tag=bow_shot]
 
-Finally, paste in the fourth command block :
+Then, paste in the fourth command block :
 ```
 execute at @a if score @n bow_shot >= #checker bow_shot run scoreboard players set @n bow_shot 0
 ```
 This reset the counter of the usage of bows of every player, so that the first command doesn't spawn infinite TNT.
 Nothing to change here if you replaced the TNT.
 
+Finally, to get the custom bow, do : 
+```
+/give @s bow[minecraft:custom_data={"tnt_bow":yes},minecraft:custom_name={text:"TNT Launcher",italic:false}]
+```
+This gives you a bow with a tag, and a custom name !
 Hope you enjoyed, and have fun !
 
 Note : I wanted to do stuff using command blocks because of BlockerLocker (youtube channel). If you liked this, go check them out !
